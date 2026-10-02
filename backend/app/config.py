@@ -1,5 +1,6 @@
-from pydantic_settings import BaseSettings, SettingsConfigDict
 from typing import List
+
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
@@ -19,5 +20,6 @@ class Settings(BaseSettings):
     chroma_collection_name: str = "project_knowledge"
 
     cors_origins: List[str] = ["http://localhost:3000", "http://127.0.0.1:3000"]
+
 
 settings = Settings()

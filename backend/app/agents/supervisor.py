@@ -1,9 +1,10 @@
-from backend.app.agents.supervisor import SupervisorAgent
+from typing import Any, Dict
 
 
-class Supervisor:
+class SupervisorAgent:
     def __init__(self):
-        self.agent = SupervisorAgent()
+        self.name = "supervisor"
 
-    def run(self, state):
-        return self.agent.handle(state)
+    def handle(self, state: Dict[str, Any]) -> Dict[str, Any]:
+        state.setdefault("errors", [])
+        return state

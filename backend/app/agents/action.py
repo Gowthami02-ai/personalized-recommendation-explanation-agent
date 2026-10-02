@@ -1,13 +1,12 @@
-from typing import Any, Dict, List
+from typing import Any, Dict
 
 
 def action_agent(state: Dict[str, Any]) -> Dict[str, Any]:
-    proposed = [
+    state["proposed_actions"] = [
         {
             "action": "create_support_case",
             "status": "not_executed",
-            "reason": "No support case required for a recommendation explanation request.",
+            "reason": "No support case required for a recommendation explanation flow.",
         }
     ]
-    state["proposed_actions"] = proposed
     return state

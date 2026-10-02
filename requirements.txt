@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+langgraph
+langchain
+langchain-openai
+chromadb
+psycopg[binary]
+redis
+python-dotenv
+pytest
+httpx
+openai

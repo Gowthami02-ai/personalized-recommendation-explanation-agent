@@ -1,4 +1,4 @@
-from typing import Any, Dict, List, Literal, TypedDict, NotRequired
+from typing import Any, Dict, List, TypedDict
 
 
 class AgentState(TypedDict):
@@ -18,4 +18,4 @@ class AgentState(TypedDict):
     human_approval: Dict[str, Any]
     errors: List[str]
     final_response: str
-    workflow_id: NotRequired[str]
+    workflow_id: str

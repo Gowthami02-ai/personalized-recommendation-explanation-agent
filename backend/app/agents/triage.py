@@ -1,24 +1,16 @@
-from typing import Any, Dict, List
+from typing import Any, Dict
 
 from backend.app.models.schemas import TriageResult
 
 
-class SupervisorAgent:
-    def __init__(self):
-        self.name = "supervisor"
-
-    def handle(self, state: Dict[str, Any]) -> Dict[str, Any]:
-        state.setdefault("errors", [])
-        return state
-
-
 def triage_agent(state: Dict[str, Any]) -> Dict[str, Any]:
     user_query = state.get("user_query", "")
-    text = user_query.lower()
+    lower_query = user_query.lower()
+
     intent = "recommendation_explanation"
-    if "refund" in text or "return" in text:
-        intent = "return_or_refund"
-    if "size" in text or "fit" in text:
+    if "refund" in lower_query or "return" in lower_query:
+        intent = "refund_support"
+    elif "size" in lower_query or "fit" in lower_query:
         intent = "fit_support"
 
     triage = TriageResult(

@@ -1,0 +1,7 @@
+# Sample FAQ content for the demo.
+
+Q: Why was this product recommended to me?
+A: Because the system checked your constraints, product attributes, and availability and then selected the best-fitting option based on evidence.
+
+Q: Can you show your internal reasoning?
+A: The system should provide a concise explanation based on verified facts and avoid exposing hidden operational logic.

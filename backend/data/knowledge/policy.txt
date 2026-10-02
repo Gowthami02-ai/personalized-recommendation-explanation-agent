@@ -1,0 +1,10 @@
+# Sample knowledge content for the demo system.
+
+Recommendation policy:
+- Use only verified product and customer attributes.
+- Respect privacy constraints and avoid exposing hidden decision logic.
+- Cite policy or operational documents when relevant.
+
+Customer support guidance:
+- When the user asks for an explanation, summarize evidence and constraints.
+- If a recommendation cannot be justified, state the limitation instead of inventing support.

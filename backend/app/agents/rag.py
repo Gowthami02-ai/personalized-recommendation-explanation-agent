@@ -4,9 +4,9 @@ from backend.app.rag.vector_store import KnowledgeVectorStore
 
 
 def rag_retrieval_agent(state: Dict[str, Any]) -> Dict[str, Any]:
-    vector_store = KnowledgeVectorStore()
+    store = KnowledgeVectorStore()
     query = state.get("user_query", "")
-    docs = vector_store.search_documents(query=query, limit=5)
+    docs = store.search_documents(query=query, limit=5)
 
     state["retrieved_documents"] = [
         {
